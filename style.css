@@ -1,0 +1,355 @@
+* {
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height:100vh;
+    margin: 0;
+    background-color: #EBEBEB;
+    display: flex;
+    justify-content: center;
+}
+
+h1, h2, h3 {
+    font-family: 'Frank Ruhl Libre', serif;
+}
+h1 {
+    font-size: 2.6rem;
+    margin: 0;
+    color: #fff;
+}
+
+h2 {
+    font-size: 2.2rem;
+    margin: 0;
+    color: #fff;
+}
+  
+p {
+    font-family: 'Fira Sans', sans-serif;
+    color: rgba(0, 0, 0, 0.7);
+    margin: 0;
+    line-height: 1.5;
+}
+.allpage{
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: auto;
+    grid-template-areas: 
+    "containerfirst containerfirst containerfirst Learn Learn Learn"
+    "containerfirst containerfirst containerfirst Join Join Join"
+    ". containerfooter containerfooter containerfooter containerfooter ."
+    "middle middle middle middle middle middle"
+    "cards cards cards cards cards cards"
+    "aboutus aboutus aboutus aboutus aboutus aboutus"
+    "how how how how how how"
+    "up up up up up up"
+    "footer footer footer footer footer footer" ;
+   
+}
+.containerfirst{
+    /*grid-column: auto / span 3;*/
+    grid-area: containerfirst;
+    background-color: #C7DDEA;
+    height: 35rem; /*the height of the containerfirst element is 35 times the font size of the root element.*/
+    background-image: url("family.png");
+    background-position: 90% bottom;/* background image within the element,
+     The "90%" means, the left edge of the element horizontally,
+      aligns it with the bottom edge of the element vertically namely that the image is positioned closer to the right edge.*/
+    background-size: 60%;/*sets the image size to 60% of the container's width and 60% of its height*/
+    background-repeat: no-repeat;
+    padding: 4rem; /*Padding creates space within the element, pushing the content away from its borders.*/
+
+}
+
+.containerfirst__text{
+    font-family: 'Fira Sans', sans-serif;
+    color: rgba(0, 0, 0, 0.7);
+    margin: 0;
+    line-height: 1.5;
+    margin-bottom: 2.5rem;
+}
+span{
+    color:aliceblue;
+}
+
+.joinbutton{
+    background-color: #fff;
+    text-transform: uppercase;
+    padding: 0 2rem;/*No padding is applied to the top and bottom.
+    2 rems of padding are applied to the left and right.*/
+    border-radius: 999rem;
+    border: none;
+    height: 2.5rem;
+    cursor: pointer;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
+}
+.Learn{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    /*grid-column: 4 / 7;*/
+    grid-area: Learn;
+    text-align: center;
+    background-color: #F17949;
+    min-height: 20rem;/*to valame fia to responsivt sto telos*/
+}
+
+.Join{
+    /*grid-column: 4 / 7 ;*/
+    grid-area: Join;
+    text-align: center;
+    background-color: #FFB939;
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 20rem;/*to valame fia to responsivt sto telos*/
+
+}
+
+.containerfooter {
+    display: flex;
+    grid-area:containerfooter;
+    justify-content: space-around;
+    padding: 1.2rem; 
+}
+     
+.containerfootertext {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.4);
+}
+.active {
+    color: #000000;
+}
+
+.middle{
+    display: flex;
+    grid-area:middle;
+    height: 40rem;
+   background-color: #A9A19E;
+}
+.middlejoin{
+    padding: 5rem  ;
+}
+.middlejoin h1 { 
+    justify-content: center;
+    max-width: 500px;
+    margin-bottom: 3rem;
+   
+
+}
+.middletext{ 
+    max-width: 420px;
+    padding: 5rem;
+
+}
+.cards{
+    
+    grid-area: cards;
+    display: flex;
+    justify-content: center;
+    background-color: #FAB131;
+    flex-wrap: wrap;/*to valame fia to responsivt sto telos*/
+
+}
+.card {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 275px;
+    border: 1px solid #EBEBEB;
+    border-radius: 4px;
+    margin: 0.5rem;
+    padding: 1rem;
+    transform: translateY(-200px);/*The Y-axis runs vertically from bottom to top. It is used to represent the 
+    vertical position or coordinates of points or elements.
+     When you move along the Y-axis from bottom to top, the Y-coordinate increases, and when you move 
+     from top to bottom, the Y-coordinate decreases.*/
+}
+
+.card h3 {
+    margin: 0;
+}
+
+.card p {
+    font-size: 0.7rem;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.7);
+    padding: 0.5rem;
+}
+.card__children, .card__just-right, .card__old-fart {
+    width: 100%;
+    height: 10rem;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+.card__children {
+    background-image: url("child.png");
+    background-repeat: no-repeat;
+    background-size: 40%;
+    background-position: center -55%;
+    background-color: #C7DDEA;
+    transform: translateY(-50px);/*(moves) an element along the vertical (Y) axis
+    .create effects like animating an element when it needs to shift vertically,
+     such as when hovering over a button or scrolling down a page.*/
+}
+.card__justright {
+    width: 100%;
+    height: 10rem;
+    background-image: url("adult.png");
+    background-repeat: no-repeat;
+    background-size: 40%;
+    background-position: center -5%;
+    background-color: #FAB131;
+    transform: translateY(-50px);
+}
+.card__old-fart {
+    width: 100%;
+    height: 10rem;
+    background-image: url("old.png");
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center -7%;
+    background-color: #F17949;
+    transform: translateY(-50px);
+}
+.aboutus {
+    grid-area:aboutus;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FAB131;
+    padding-bottom: 8rem;
+}
+.aboutus p {
+    max-width: 500px;
+    text-align: center;
+}
+.how {
+    grid-area:how;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.how__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 15rem;
+    background-color: #fff;
+    position: relative;
+}
+
+.how__box aside {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 1rem;
+}
+
+.how__box p {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.how__box--blue {
+    background-color: #C7DDEA;
+    
+}
+.how__box--blue h2{
+color: black;
+    
+}
+
+aside{
+    font-size: 35px;
+    color: rgba(0, 0, 0, 0.4);
+    font-weight: 900;
+}
+.how__box--grey {
+    background-color: #EBEBEB;
+}
+
+.how__box--orange {
+    background-color: #F17949;
+}
+
+.up {
+    grid-area: up;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgray;
+    padding: 0.8rem;
+}
+
+.footer {
+    grid-area: footer;
+    min-height: 20rem;
+    background-color: gray;
+}
+
+@media screen and (max-width: 768px) {
+   
+    .allpage {
+        grid-template-columns: 100%;
+        grid-template-areas:
+            "containerfirst"
+            "Learn"
+            "Join"
+            "containerfooter"
+            "middle"
+            "cards"
+            "aboutus"
+            "how"
+            "up"
+            "footer";
+    }
+
+    .middle
+    {
+        flex-direction: column;
+    }
+
+    .card {
+        max-width: 100%;
+        
+    }
+   /* .how {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .how__box {
+        height: auto;
+        margin: 1rem 0;
+        text-align: center;
+    }
+
+    .how__box aside {
+        position: relative;
+        top: initial;
+        left: initial;
+        margin: 0;
+    }
+
+    aside {
+        font-size: 1.2rem;
+    }
+
+    .up {
+        padding: 0.5rem;
+    }
+
+    .footer {
+        min-height: auto;
+    }*/
+}
